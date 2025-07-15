@@ -2,19 +2,26 @@
   "w1": {
     "widgetId": "w1",
     "x": ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
-    "y": [10, 35, 6, 47, 26, 55, 75],
-    "performance": ["bad", "avg", "bad", "avg", "low", "avg", "good"]
+    "datasets": [
+      { "name": "Events A", "y": [10, 35, 6, 47, 26, 55, 75] },
+      { "name": "Events B", "y": [15, 25, 12, 40, 32, 60, 80] },
+      { "name": "Events C", "y": [30, 25, 51, 65, 29, 37, 55] }
+    ]
   },
   "w2": {
     "widgetId": "w2",
     "x": ["earphones", "speaker", "tv", "phones"],
-    "y": [81, 65, 46, 55],
-    "performance": ["high", "medium", "low", "avg"]
+    "datasets": [
+      { "name": "Sales 2024", "y": [81, 65, 46, 55] },
+      { "name": "Sales 2025", "y": [75, 70, 50, 60] }
+    ]
   },
   "w3": {
     "widgetId": "w3",
     "x": [2022, 2023, 2024, 2025],
-    "y": [1.25, 2.13, 4.5, 4.1],
-    "performance": ["low", "avg", "high", "avg"]
+    "datasets": [
+      { "name": "India", "y": [1.25, 2.13, 4.5, 4.1] },
+      { "name": "Nepal", "y": [1.5, 2.5, 3.8, 4.4] }
+    ]
   }
 }
