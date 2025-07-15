@@ -1,9 +1,11 @@
 # Charting-Backend
 
 '''
-clone
-compile
-run
+clone, 
+
+compile,
+
+run,
 
 run charting-frontend
 '''
