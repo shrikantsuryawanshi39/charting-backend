@@ -1,0 +1,52 @@
+{
+  "w1": {
+    "widgetId": "w1",
+    "xAxisField": "Day",
+    "yAxisField": "Events",
+    "performanceField": "performance",
+    "chartType": "line",
+    "barColor": "#4caf50",
+    "width": 900,
+    "height": 500,
+    "xAxisLabel": "Days",
+    "yAxisLabel": "Events",
+    "showGrid": false,
+    "fontFamily": "Helvetica",
+    "legendPosition": "top",
+    "animation": true
+  },
+
+  "w2": {
+    "widgetId": "w2",
+    "xAxisField": "Product",
+    "yAxisField": "Sales %",
+    "performanceField": "performance",
+    "chartType": "bar",
+    "barColor": "#f44336",
+    "width": 800,
+    "height": 500,
+    "xAxisLabel": "Products",
+    "yAxisLabel": "sales",
+    "showGrid": true,
+    "fontFamily": "Verdana",
+    "legendPosition": "top",
+    "animation": true
+  },
+
+  "w3": {
+    "widgetId": "w3",
+    "xAxisField": "Year",
+    "yAxisField": "Growth",
+    "performanceField": "performance",
+    "chartType": "pie",
+    "barColor": "blue",
+    "width": 800,
+    "height": 500,
+    "xAxisLabel": "Years",
+    "yAxisLabel": "Growth",
+    "showGrid": false,
+    "fontFamily": "Verdana",
+    "legendPosition": "top",
+    "animation": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "w1": {
+    "widgetId": "w1",
+    "x": ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
+    "y": [10, 35, 6, 47, 26, 55, 75],
+    "performance": ["bad", "avg", "bad", "avg", "low", "avg", "good"]
+  },
+  "w2": {
+    "widgetId": "w2",
+    "x": ["earphones", "speaker", "tv", "phones"],
+    "y": [81, 65, 46, 55],
+    "performance": ["high", "medium", "low", "avg"]
+  },
+  "w3": {
+    "widgetId": "w3",
+    "x": [2022, 2023, 2024, 2025],
+    "y": [1.25, 2.13, 4.5, 4.1],
+    "performance": ["low", "avg", "high", "avg"]
+  }
+}
