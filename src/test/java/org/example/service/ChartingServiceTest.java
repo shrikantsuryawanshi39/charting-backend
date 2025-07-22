@@ -1,25 +1,38 @@
-package org.example.service;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
-import org.example.service.ChartingService;
-import org.example.model.Charting;
-import org.junit.jupiter.api.Test;
+import java.util.*;
 
-import java.util.List;
+@Service
+public class ChartingService {
 
-import static org.junit.jupiter.api.Assertions.*;
+    private final JdbcTemplate jdbcTemplate;
 
-class ChartingServiceTest {
-
-    private final ChartingService chartingService = new ChartingService();
-
-    @Test
-    void testChartingService() {
-        Charting data = chartingService.getChartData("w1");
-//        assertEquals("w1", data.widgetId());
-//        assertEquals(List.of("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"), data.x());
-//        assertEquals(List.of(10, 35, 6, 47, 26, 55, 75), data.y());
-//        assertEquals(List.of("bad", "avg", "bad", "avg", "low", "avg", "good"), data.performance());
+    public ChartingService(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
-}
+    public Map<String, List<Object>> getChartData(String widgetId) {
+        String sqlQuery = jdbcTemplate.queryForObject(
+                "SELECT sql_query FROM widget_queries WHERE widget_id = ?",
+                String.class,
+                widgetId
+        );
 
+        List<Map<String, Object>> rows = jdbcTemplate.queryForList(sqlQuery);
+        Map<String, List<Object>> result = new LinkedHashMap<>();
+
+        if (!rows.isEmpty()) {
+            for (String key : rows.get(0).keySet()) {
+                result.put(key, new ArrayList<>());
+            }
+            for (Map<String, Object> row : rows) {
+                for (Map.Entry<String, Object> entry : row.entrySet()) {
+                    result.get(entry.getKey()).add(entry.getValue());
+                }
+            }
+        }
+
+        return result;
+    }
+}

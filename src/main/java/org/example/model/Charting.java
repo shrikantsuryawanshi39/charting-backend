@@ -1,5 +1,6 @@
 package org.example.model;
 
 import java.util.List;
+import java.util.Map;
 
-public record Charting(String widgetId, List<String> x, List<Dataset> datasets) {}
+public record Charting(Map<String, List<Object>> chartData) {}
